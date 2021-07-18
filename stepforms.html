@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <title>Go Soshul</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <meta name="viewport" content="width=640, initial-scale=.5, user-scalable=no" /> -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+      <link href="css/stepbarform.css" rel="stylesheet" >
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link href="css/radiobtn.css" rel="stylesheet" type="text/css" />
+      <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   </head>
+   <body>
+      <!-- partial:index.partial.html -->
+      <!--PEN HEADER-->
+      <header class="header">
+         <a class="logo " href="index.html">
+         <img src="images/gososhul/green-logo.png" class="stepform-Greenlogo" alt="">
+         </a>
+      </header>
+      <!--PEN CONTENT     -->
+      <div class="content">
+         <!--content inner-->
+         <div class="content__inner">
+            <div class="container overflow-hidden">
+               <!--multisteps-form-->
+               <div class="multisteps-form">
+                  <div class="row three-steptag-mob">
+                     <div class="col-lg-12 col-md-12 col-sm-12  d-flex justify-content-center ">
+                        <div class="multisteps-form__progress progress-w-br1">
+                           <h5 class="multisteps-form__progress-btn special-btn progress-w-br2 " >1.<span>&nbsp;Donate</span></h5>
+                           <h5 class="multisteps-form__progress-btn simple-line " type="button" ></h5>
+                           <h5 class="multisteps-form__progress-btn simple-line" type="button" ></h5>
+                           <!-- <h5 class="multisteps-form__progress-btn simple-line" type="button" ></h5> -->
+                           <h5 class="multisteps-form__progress-btn special-btn progress-w-br3">2.<span>&nbsp;Tag</span></h5>
+                           <h5 class="multisteps-form__progress-btn   simple-line special-btn-end progress-w-br4">3.<span>&nbsp;Share</span></h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!--form panels-->
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12 ">
+                        <form class="multisteps-form__form">
+                           <!--single form panel-->
+                           <div class="multisteps-form__panel js-active" data-animation="scaleIn">
+                              <div class="multisteps-form__content">
+                                 <div class="row pl-4 step-forms-Rpadding-mobileview">
+                                    <div class="col-lg-7 col-md-7 col-sm-7">
+                                       <div class="title-heading ">
+                                          <h5 class=" fnt-1 ">Select A Shul Campaign</h5>
+                                          <p class="para-fnt1 pb-2">This shul will be the one you are campaigning for to help meet<br> their goal.
+                                          </p>
+                                          <div class="form-group col-md-12 col-sm-12 form1-paddingall">
+                                             <select id="inputState" class="form-control select-input-drop">
+                                                <option selected>Select Shul</option>
+                                                <option>USA</option>
+                                                <option>UK</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                       <!--end row-->
+                                       <div class="row">
+                                          <div class="col-lg-12 col-md-12 col-sm-12">
+                                             <div class="form-group position-relative pb-2">
+                                                <i class="fa fa-usd icons-dollr" aria-hidden="true"></i>
+                                                <input name="subject"  id="doller-amnt1" class="chng-step-field" placeholder="Enter Your Donation Amount">
+                                             </div>
+                                             <div class="preset-amt-text">
+                                                <span>Or Select a Preset Amount</span>
+                                                <button type="button" class="btn btn-pills   amont-btn amount-100-rmargin  " value="100" onclick="foo('doller-amnt1',this.value)">+$100</button>
+                                                <button type="button" class="btn btn-pills   amont-btn " value="200" onclick="foo('doller-amnt1',this.value)">+$200</button>
+                                                <button type="button" class="btn btn-pills   amont-btn  " value="500" onclick="foo('doller-amnt1',this.value)">+$500</button>
+                                                <button type="button" class="btn btn-pills  amont-1000-btn" value="1000" onclick="foo('doller-amnt1',this.value)">+$1000</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-5 col-md-5 col-sm-5 ">
+                                       <div onclick="document.getElementById('select-box3').click()" id="box-clr-chng3" class="card web-box-background   border-0 mb-4 ">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class="mb-3 list-text-color1" id="doble-color3"><img id='select-img3' src="images/gososhul/stp11.png" width="32"> <span class="dou1">Double It!</span></li>
+                                                <li class="mbottom-1"> <label for="double it" class="container-radiobtn list-text-color2" id="doble-para-color3">Double your donation to divide among the other 354 shuls?
+                                                   <input type="checkbox" 
+                                                      onclick="checkToggle('#box-clr-chng3', 'select-box3','#select-img3','images/gososhul/stp12.png' ,'images/gososhul/stp11.png','#doble-color3','#doble-para-color3','select-box4','#doble-para-color4')" 
+                                                      id="select-box3"
+                                                      value="double it" 
+                                                      name="radio1">
+                                                   <span class="checkmark"></span>
+                                                   </label>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <div onclick="document.getElementById('select-box4').click()" id="box-clr-chng4"  class="card web-box-background mb-3  border-0">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class="mb-3 list-text-color1" id="doble-color4"><img  id='select-img4' src="images/gososhul/open-bolt.png" width="20"><span class="dou2"> Supercharge It!</span></li>
+                                                <li class="mbottom-1"> <label for="Supercharge" class="container-radiobtn list-text-color2" id="doble-para-color4">Double your donation to divide among the other 354 shuls?
+                                                   <input type="checkbox" 
+                                                      onclick="checkToggle('#box-clr-chng4', 'select-box4','#select-img4','images/gososhul/light-bolt.png' ,'images/gososhul/open-bolt.png','#doble-color4','#doble-para-color4' ,'select-box3','#doble-para-color3')" 
+                                                      id="select-box4"
+                                                      value="Supercharge" 
+                                                      name="radio1">
+                                                   <span class="checkmark"></span>
+                                                   </label>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                 </div>
+                                 <!--end row-->
+                                 <div class="button-row d-flex nextBox-rowpadding">
+                                    <button class="btn nxtbtn-step-green ml-auto js-btn-next " type="button" title="Next">Next</button>
+                                    <hr class="hr-right-line">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--single form panel-->
+                           <div class="multisteps-form__panel" data-animation="scaleIn">
+                              <div class="multisteps-form__content">
+                                 <div class="row pl-4  step-forms-Rpadding-mobileview">
+                                    <div class="col-lg-7 col-md-7 col-sm-7">
+                                       <div class="title-heading ">
+                                          <h5 class=" fnt-1 ">Join Josh and Donate</h5>
+                                          <p class="para-fnt1 pb-3">Remember, the goal is to donate to the campaign you’re tagged into to give it that  positive reach. You will have the opportunity to donate to all the other shuls as well.
+                                          </p>
+                                       </div>
+                                       <div class="row">
+                                          <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                             <div class="media pb-3 ">
+                                                <div class=" mr-2">
+                                                   <img src="images/gososhul/step1.png"> 
+                                                </div>
+                                                <div class="para-fnt2">
+                                                   <p class="title">Josh pledged to match
+                                                      your give!
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                             <div class="media pb-3 ">
+                                                <div class="  mr-2">
+                                                   <img src="images/gososhul/step2.png" > 
+                                                </div>
+                                                <div class="para-fnt2">
+                                                   <p class="title ">Sonik, Josh challenged you
+                                                      to match or beat his $500 donation.
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                             <div class="form-group position-relative pb-2">
+                                                <i class="fa fa-usd icons-dollr" aria-hidden="true"></i>
+                                                <input name="subject"  id="doller-amnt2" class="chng-step-field" placeholder="Enter Your Donation Amount">
+                                             </div>
+                                             <div class="preset-amt-text ">
+                                                <span>Or Select a Preset Amount</span>
+                                                <button type="button" class="btn btn-pills   amont-btn amount-100-rmargin  " value="100" onclick="foo('doller-amnt2',this.value)">+$100</button>
+                                                <button type="button" class="btn btn-pills   amont-btn " value="200" onclick="foo('doller-amnt2',this.value)">+$200</button>
+                                                <button type="button" class="btn btn-pills   amont-btn  " value="500" onclick="foo('doller-amnt2',this.value)">+$500</button>
+                                                <button type="button" class="btn btn-pills   amont-1000-btn  " value="1000" onclick="foo('doller-amnt2',this.value)">+$1000</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-5 col-md-5 col-sm-5">
+                                       <div onclick="document.getElementById('select-box5').click()" id="box-clr-chng5"  class="card web-box-background   border-0 mb-4 ">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class="pb-3 list-text-color1" id="doble-color5"><img id='select-img5' src="images/gososhul/stp11.png" width="32"> <span class="dou1">Double It!</span></li>
+                                                <li class="mbottom-1"> <label for="double it 2" class="container-radiobtn list-text-color2" id="doble-para-color5">Double your donation to divide among the other 354 shuls?
+                                                   <input type="checkbox" 
+                                                      onclick="checkToggle('#box-clr-chng5', 'select-box5','#select-img5','images/gososhul/stp12.png' ,'images/gososhul/stp11.png','#doble-color5','#doble-para-color5','select-box6','#doble-para-color6')" 
+                                                      id="select-box5" 
+                                                      value="double it 2" 
+                                                      name="radio2">
+                                                   <span class="checkmark"></span>
+                                                   </label>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <div onclick="document.getElementById('select-box6').click()" id="box-clr-chng6"  class="card web-box-background   border-0">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class="pb-3 list-text-color1" id="doble-color6"><img  id='select-img6' src="images/gososhul/open-bolt.png" width="20"><span class="dou2"> Supercharge It!</span></li>
+                                                <li class="mbottom-1"> <label for="Supercharge2" class="container-radiobtn list-text-color2" id="doble-para-color6">Double your donation to divide among the other 354 shuls?
+                                                   <input type="checkbox" 
+                                                      onclick="checkToggle('#box-clr-chng6', 'select-box6','#select-img6','images/gososhul/light-bolt.png' ,'images/gososhul/open-bolt.png','#doble-color6','#doble-para-color6' ,'select-box5','#doble-para-color5')" 
+                                                      id="select-box6"
+                                                      value="Supercharge2" 
+                                                      name="radio2">
+                                                   <span class="checkmark"></span>
+                                                   </label>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                 </div>
+                                 <!--end row-->
+                                 <div class="button-row d-flex  nextBox-rowpadding ">
+                                    <button id="go-backprev-btn" class="btn  js-btn-prev " type="button" ><i class="fa fa-caret-left  back-clr-icon" aria-hidden="true"></i>&nbsp;Go Back</button>
+                                    <button class="btn nxtbtn-step-green ml-auto js-btn-next " type="button" title="Next">Next</button>
+                                    <hr class="hr-right-line">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--single form panel-->
+                           <div class="multisteps-form__panel" data-animation="scaleIn">
+                              <div class="multisteps-form__content" >
+                                 <div class="row pl-4 step-forms3-Rpadding-mobileview">
+                                    <div class="col-lg-6  col-md-6  col-sm-6">
+                                       <div class="form-row">
+                                          <h5 class=" fnt-2 pr-5">Payment Details</h5>
+                                          <div class="form-group ">
+                                             <input type='radio' checked value='creditcard' name='paymentMode' id='creditcard'/>
+                                             <label for='creditcard' class="radiobtntyp"><img src="images/gososhul/cc2.png" id="cc1">&nbsp;&nbsp;Credit Card</label>
+                                          </div>
+                                          <div class="form-group pr-2">
+                                             <input type='radio' value='instantcash' name='paymentMode' id='instantcheck'/>
+                                             <label for='instantcheck' class="radiobtntyp"><img src="images/gososhul/ic1.png" id="ic1">&nbsp;&nbsp;Instant Check</label>
+                                          </div>
+                                       </div>
+                                       <div class="form-row">
+                                          <div class="form-group col-md-6 pr-3">
+                                             <label class="lab-colr">First Name</label>
+                                             <input name="name1" id="name1" type="text" class="chng-frnd-fd " placeholder="Enter First Name">
+                                          </div>
+                                          <div class="form-group col-md-6 pr-3">
+                                             <label class="lab-colr">Last Name
+                                             </label>
+                                             <input name="name2" id="name2" type="text" class="chng-frnd-fd " placeholder="Enter Last Name">
+                                          </div>
+                                       </div>
+                                       <div class="form-group pr-3">
+                                          <label class="lab-colr">Credit Card Number
+                                          </label>
+                                          <input name="email" id="mail" type="text" class="chng-frnd-fd" placeholder="xxxxxxxxxxxxxxxxxxx">
+                                          <input name="email" id="mail" type="text" class="cvv-input" placeholder="">
+                                       </div>
+                                       <div class="form-row pb-1">
+                                          <div class="form-group col-md-6 pr-3">
+                                             <label class="lab-colr">Exp. Date
+                                             </label>
+                                             <input name="name2" id="name3" type="text" class="chng-frnd-fd " placeholder="_ _ /_ _ ">
+                                          </div>
+                                          <div class="form-group col-md-6 pr-3">
+                                             <label class="lab-colr">CVV
+                                             </label>
+                                             <input name="name2" id="name4" type="text" class="chng-frnd-fd " placeholder="123">
+                                          </div>
+                                       </div>
+                                       <div class="form-group pt-4">
+                                          <div class="custom-control custom-checkbox">
+                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                             <label class="custom-control-label list-text-color2 txt-chng5" for="customCheck1">Yes, charge me the fees of $3.95 so the shul can keep it all!</label>
+                                          </div>
+                                          <!--   <div class="form-check">
+                                             <input class="form-check-input" type="checkbox" id="gridCheck">
+                                             <label class="gridcheck1" for="gridCheck">
+                                             Yes, charge me the fees of $3.95 so the shul can keep it all!
+                                             </label>
+                                             </div> -->
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6  col-md-6  col-sm-6  form3-paddingall ">
+                                       <div class="d-flex mb-2 justify-content-between">
+                                          <h4 class="sum-text">Summary</h4>
+                                       </div>
+                                       <div class="table-responsive">
+                                          <table class="table table-center step-form-price-table table-padding mb-2">
+                                             <tbody>
+                                                <tr id="row-1">
+                                                   <td class="tb-cont-size border-0">Donation <span>(young israel of cherry hill)</span></td>
+                                                   <td class=" tb-wg border-0">$1000 </td>
+                                                   <td class="border-0"><span><button type="button" class="bg-transparent stepform-table-cross-button"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 22px;color: red"></i></button></span></td>
+                                                </tr>
+                                                <tr id="row-2">
+                                                   <td class="tb-cont-size border-0">Double it<span>(all shuls)</span></td>
+                                                   <td class=" tb-wg border-0">$180</td>
+                                                   <td class="border-0"><span ><button type="button" class="bg-transparent  stepform-table-cross-button"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 22px;color: red"></i></button></span></td>
+                                                </tr>
+                                                <tr id="row-3">
+                                                   <td class="tb-cont-size border-0">Fees</td>
+                                                   <td class=" tb-wg  border-0">$9.95</td>
+                                                   <td class="border-0"><span><button type="button" class="bg-transparent stepform-table-cross-button"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 22px;color: red"></i></button></span></td>
+                                                </tr>
+                                                <tr >
+                                                   <td class="tb-cont-size ">Total</td>
+                                                   <td class=" tb-wg  ">$1189.95</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                       <div class="form-group position-relative mb-0 mob-summyhonorof11">
+                                          <label class="honor-text">In Honor Of</label>
+                                          <textarea name="comments" id="comments"  class="textbox-area-filed" placeholder="Write a short message"></textarea>
+                                       </div>
+                                       <div class="form-check form-check-inline mob-checkbox112">
+                                          <div class="form-group">
+                                             <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="addnewaddress">
+                                                <label class="custom-control-label list-text-color2 txt-chng5" for="addnewaddress">Keep Me Anonymous</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                 </div>
+                                 <!--end row-->
+                                 <div class="button-row d-flex col-12 form3-donatstepthree">
+                                    <button id="go-backprev-btn" class="btn  js-btn-prev " type="button" ><i class="fa fa-caret-left  back-clr-icon" aria-hidden="true"></i>&nbsp;Go Back</button>
+                                    <button class="btn nxtbtn-step-green ml-auto js-btn-next " type="button" title="Next">Next</button>
+                                    <hr class="hr-right-line">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--single form panel-->
+                           <div class="multisteps-form__panel " data-animation="scaleIn">
+                              <div class="multisteps-form__content" style="margin-top: -20px;">
+                                 <div class="row pl-4 step-forms3-Rpadding-mobileview">
+                                    <div class="col-lg-6  col-md-7  col-sm-6">
+                                       <h5 class=" fnt-2 form4-taghaning ">Choose 2 people you can rely on<br> 
+                                          to join you in this mitzvah...
+                                       </h5>
+                                    </div>
+                                    <div class="col-lg-6  col-md-5  col-sm-6"></div>
+                                    <div class="col-lg-6  col-md-6  col-sm-6 pr-4 ">
+                                       <h4 class="frnd-fng1 mb-2 mt-1 "> Friend 1 </h4>
+                                       <div class="row">
+                                          <div class="col-lg-6  col-md-6  col-sm-6 ">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">First Name</label>
+                                                <input name="name1" id="name1" type="text" class="chng-frnd-fd " placeholder="Enter First Name">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-6  col-md-6  col-sm-6 lastnameFormtagpl-2 ">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">Last Name
+                                                </label>
+                                                <input name="name2" id="name2" type="text" class="chng-frnd-fd " placeholder="Enter Last Name">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-12  col-md-12  col-sm-12">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">Email
+                                                </label>
+                                                <input name="email" id="mail" type="email" class="chng-frnd-fd" placeholder="Enter Email">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6  col-md-6  col-sm-6  form4-tag-paddingall  ">
+                                       <h4 class="frnd-fng1 mb-2 mt-1"> Friend 2 </h4>
+                                       <div class="row">
+                                          <div class="col-lg-6  col-md-6  col-sm-6">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">First Name</label>
+                                                <input name="name1" id="name1" type="text" class="chng-frnd-fd " placeholder="Enter First Name">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-6  col-md-6  col-sm-6 lastnameFormtagpl-2">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">Last Name
+                                                </label>
+                                                <input name="name2" id="name2" type="text" class="chng-frnd-fd " placeholder="Enter Last Name">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                          <div class="col-lg-12  col-md-12  col-sm-12">
+                                             <div class="form-group position-relative">
+                                                <label class="lab-colr">Email
+                                                </label>
+                                                <input name="email" id="mail" type="email" class="chng-frnd-fd" placeholder="Enter Email">
+                                             </div>
+                                          </div>
+                                          <!--end col-->
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6  col-md-6  col-sm-6 pr-4 form4NewPaddingTop ">
+                                       <div onclick="document.getElementById('customCheck3').click()" id="challeng-box"  class="card web-box2-background">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class="list-chalng-color1"><img src="images/gososhul/hand1.png" width="32"><span class="dou1"> Challenge Match</span></li>
+                                                <li class="mbottom-1">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" onclick="checkToggleborder('#challeng-box', '#customCheck3', '#customCheck4', '#doubleUp-box')"class="custom-control-input" value="customCheck3" id="customCheck3">
+                                                      <span class="custom-control-label list-text-color2 txt-chng5 paddingl-onchecked-tym" for="customCheck3">Increase donation by 150% by challenging your friends to match or beat your donation. Just a friendly challenge for charity!</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6  col-md-6  col-sm-6 form4NewPaddingTBBoth ">
+                                       <div onclick="document.getElementById('customCheck4').click()" id="doubleUp-box" class="card web-box2-background   ">
+                                          <div class="card-body pb-0">
+                                             <ul class="list-unstyled text-muted">
+                                                <li class=" list-chalng-color1"><img src="images/gososhul/stp11.png" width="32"> <span class="dou1">Double Up!</span></li>
+                                                <li class="mbottom-1">
+                                                   <div class="custom-control custom-checkbox">
+                                                      <input type="checkbox" class="custom-control-input" value="customCheck4" id="customCheck4" onclick="checkToggleborder('#doubleUp-box', '#customCheck4', '#customCheck3', '#challeng-box')">
+                                                      <span for="customCheck4" class="custom-control-label list-text-color2 txt-chng5 paddingl-onchecked-tym" for="customCheck4">Increase your friends donation by an average of 66% by letting them know you’ll automatically match whatever they donate.</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!--end col-->
+                                 </div>
+                                 <div class="button-row d-flex col-12 tagpage-rowpadding ">
+                                    <button id="go-backprev-btn" class="btn  js-btn-prev " type="button" ><i class="fa fa-caret-left  back-clr-icon" aria-hidden="true"></i>&nbsp;Go Back</button>
+                                    <button class="btn nxtbtn-step-green ml-auto js-btn-next " type="button" title="Next">Next</button>
+                                    <hr class="hr-right-line">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--single form panel-->
+                           <div class="multisteps-form__panel " data-animation="scaleIn">
+                              <div class="multisteps-form__content">
+                                 <div class="row ">
+                                    <div class="col-lg-1  col-md-2  col-sm-0 "></div>
+                                    <div class="col-lg-8  col-md-8  col-sm-8 ">
+                                       <div class="row">
+                                          <div class="col-lg-12">
+                                             <div class="title-heading form5-share-paddingall  ">
+                                                <h5 class=" fnt-1 mb-2"><img src="images/gososhul/h2.png" ><span class="pl-2">GoSoshul via Social!</span></h5>
+                                                <p class="para-fnt7 ">Take a few extra seconds to share and challenge your friends publicly via one or more of the social platforms below to spread the good. Every person you refer will be tracked so you can see how far your touch has gone</p>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-12  col-md-12  col-sm-12 pl-0 pr-0 pt-2 form5-share-txtalign">
+                                             <a href="javascript:void(0)" class="btn btn-pills btn-fb1-clr mt-2 mr-3"><img src="images/gososhul/fb.png"  ><span class="pl-2 dis-fb">Facebook</span></a>
+                                             <a href="javascript:void(0)" class="btn btn-pills btn-tw1-clr mt-2 mr-3"><img src="images/gososhul/tw.png"  ><span class="pl-2 dis-twit">Twitter</span></a>
+                                             <a href="javascript:void(0)" class="btn btn-pills btn-wsap1-clr mt-2 mr-3"><img src="images/gososhul/wsap.png"   ><span class="pl-2 dis-whtsap">WhatsApp</span></a>
+                                             <a href="javascript:void(0)" class="btn btn-pills btn-inst1-clr mt-2 "><img src="images/gososhul/inst.png"   ><span class="pl-2 dis-insta">Instagram</span></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="button-row d-flex  col-12 sharepageNxtbtn-rowpadding" >
+                                    <button id="go-backprev-btn" class="btn  js-btn-prev " type="button" ><i class="fa fa-caret-left  back-clr-icon" aria-hidden="true"></i>&nbsp;Go Back</button>
+                                    <button class="btn nxtbtn-step-green ml-auto" type="button" >I Did It!</button>
+                                    <hr class="hr-right-line">
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="backdrop1 animate__animated animate__bounceInLeft">
+         <div id="myModal" class="col-lg-7  col-md-7  col-sm-7 bg-goback-box ">
+            <h5 class="join-font mb-2">Lets Get Started </h5>
+            <p class="para-fnt1">Please review and confirm your personal information…
+            </p>
+            <div class="form-row mt-4">
+               <div class="col-12 col-sm-6 lestgo-formfiled1">
+                  <label class="label-font-clr">First Name</label>
+                  <input class="multisteps-form__input form-control font-filed-backgo " type="text" placeholder="First Name"/>
+               </div>
+               <div class="col-12 col-sm-6 mt-4 mt-sm-0 pl-2 ">
+                  <label class="label-font-clr">Last Name</label>
+                  <input class="multisteps-form__input form-control font-filed-backgo" type="text" placeholder="Last Name"/>
+               </div>
+            </div>
+            <div class="form-row mt-4 mb-2">
+               <div class="col-12 col-sm-12">
+                  <label class="label-font-clr">Email</label>
+                  <input class="multisteps-form__input form-control font-filed-backgo" type="text" placeholder="Email"/>
+               </div>
+            </div>
+            <div class="button-row d-flex mt-4 mb-5 letsgoo-btn-float-chng ">
+               <a href="#" id="lets-gopage" class="btn btn-padding-chng go-btn-1 js-btn-next">Let’s Go!</a>
+            </div>
+         </div>
+      </div>
+      <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+      <script  src="js/stepbar.js"></script>
+      <script type="text/javascript">
+         // Stepform Price Table Cross Button Functionality
+         $("tr").hover(
+           function () {
+               // console.log(this)
+             $(this).find("button").css({"opacity":"1", "cursor": "pointer"});
+           }, 
+           function () {
+             $(this).find("button").css("opacity","0");
+           }
+         );
+          
+         
+          $(document).ready(function(ob) {
+          $(".backdrop1").fadeTo(200, 1);
+         $("body").css('overflow', 'hidden');
+         
+         $("#lets-gopage").click(function() {
+          $(".backdrop1").fadeOut(200);
+          $("body").css('overflow', 'auto');
+          $(".progress-w-br1 h5").first().addClass("js-active");
+          $(".nxtbtn-step-green").css('color', '#211D28');
+           $(".nxtbtn-step-green").css('border', '3px solid #55BE21');
+            $(".hr-right-line").css('border', '2px solid #55BE21');
+         });
+         });
+         
+         
+         // preset amount select code
+         
+         function foo(elem,amount){
+         document.getElementById(elem).value = amount
+         }
+         
+         $("#doller-amnt1").focus(function(){
+         $(this).css("border-bottom", "1.2px solid #55BE21")
+         })
+         $("#doller-amnt1").blur(function(){
+         $(this).css("border-bottom", "1.2px solid rgb(33,29,40,0.2)")
+         })
+         // creadit card radio btn code
+         $('input:radio[name="paymentMode"]').change(
+         function(){
+             var $src1 = "";
+             var $src2= "";
+         
+             if ($(this).val() == 'instantcash') {
+                 $src1 = "images/gososhul/ic2.png";
+                 $src2 = "images/gososhul/cc1.png"
+                 // $('#').addClass('radiobtntyp')
+                 // $('#').removeClass('radiobtntyp')
+             }
+             else if ($(this).val() == 'creditcard') {
+                 $src1 = "images/gososhul/ic1.png";
+                 $src2 = "images/gososhul/cc2.png"
+                 // $('#').addClass('radiobtntyp')
+                 // $('#').removeClass('radiobtntyp')
+             }
+             $('#cc1').attr('src', $src2);
+             $('#ic1').attr('src', $src1);
+         });
+         
+         
+         
+         function checkToggle(boxId, checkBoxId, selectedImgId, CheckedImgpath, UncheckedImgPath, dblClr, dblParaClr, alternateCheckbox,alternateLable){
+         
+         let checkOtherCheckBox = document.getElementById(alternateCheckbox).checked;
+         if(checkOtherCheckBox){
+           // document.getElementById(alternateCheckbox).checked = false;
+           $(alternateLable).click()
+         }
+         let isChecked = document.getElementById(checkBoxId).checked;
+         // alert(isChecked);
+         
+         if(isChecked){
+             $(selectedImgId).attr('src',CheckedImgpath);
+             $(boxId).css('background-color', '#55BE21');
+             $(dblClr).css('color', '#ffffff');
+              $(dblParaClr).css('color', '#ffffff')
+         }
+         else if(!isChecked){
+             $(selectedImgId).attr('src',UncheckedImgPath);
+             $(boxId).css('background-color', 'rgb(241, 242, 246,0.4)'); 
+              $(dblClr).css('color', '#211D28');
+              $(dblParaClr).css('color', '#211D28')
+         }
+         
+         }
+         // check box border color chng
+         function checkToggleborder(boxId, checkBoxId, alternateCheckbox, alternateboxId){
+         console.log(boxId, checkBoxId, alternateCheckbox, alternateboxId)
+         let checkOtherCheckBox = $(alternateCheckbox).is(':checked');
+         console.log(checkOtherCheckBox)
+         if(checkOtherCheckBox){
+           
+         }
+         
+         let isChecked = $(checkBoxId).is(':checked');
+         
+         
+         if(isChecked){
+             
+             $(boxId).css('border' , '1px solid #55BE21', 'border-radius' , '20px');
+             
+         }
+         else if(!isChecked){
+             $(boxId).css('border' , 'none'); 
+             $(checkBoxId).prop( "checked", false );
+         }
+         }
+         
+         
+      </script>
+   </body>
+</html>
